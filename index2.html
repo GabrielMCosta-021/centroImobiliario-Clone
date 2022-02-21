@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.ico">
+    <title>Centro Imobiliário</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+
+    <div class="menu-side">
+        <button id="btn-menu" onclick="menuHid()">
+            &#215;
+        </button>    
+        <div class="menu-text">
+            <h3><a href="www.google.com.br">HOME</a></h3>
+            <h3><a href="www.google.com.br">BLOG</a></h3>
+            <h3><a href="www.google.com.br">ANUNCIE SEU IMÓVEL</a></h3>
+            <h3><a href="www.google.com.br">TRABALHE CONOSCO</a></h3>
+            <h3><a href="www.google.com.br">LOCALIZAÇÃO</a></h3>
+            <h3><a href="www.google.com.br">CONTATO</a></h3>
+            <h3><a href="www.google.com.br">MEUS FAVORITOS</a></h3>
+        </div>
+    </div>
+
+
+    <div class="wpp">
+        <a href="https://api.whatsapp.com/send?phone=5513974096316&text=Quero%20ter%20mais%20informa%c3%a7%c3%b5es%20e%20tirar%20algumas%20d%c3%bavidas">
+
+            <img src="images/ativo-2.png" alt="whats image">
+
+            <span>1</span>
+
+            <p>Atendimento via Whatsapp</p>
+            
+        </a>
+    </div>
+
+    <nav class="navbar-fixed">
+        <a class="nav-image">
+            <img src="images/logo-branco.png" alt="logo" class="logo" id="logo">
+        </a>
+        
+        <span class="tell-main">
+            <button type="button" class="phone">
+                <img src="images/call-answer.png" alt="tell-phone"> 
+                <span>Ver Telefone</span>
+            </button>
+            
+            <button id="btn-menu" class="menu" onclick="menuHid()">
+                ≡
+            </button>
+
+        </span>
+    </nav>  
+
+    <div class="container">
+
+        <h3>Chegou a hora de encontrar</h3>
+        <h2>o seu imóvel no litoral</h2>
+
+        <div class="form-top">
+
+            <select name="Tipo" id="type" class="filtro1">
+                <option>Tipo</option>
+                <option>Todos os Tipos</option>
+                <option>Apartamento</option>
+                <option>Casa</option>
+                <option>Terreno</option>
+            </select>
+
+            <select name="cidade" id="type" class="filtro2">
+                <option>Cidade...</option>
+                <option>Todos as cidades</option>
+                <option>Peruíbe</option>
+                <option>Itanhaém</option>
+                <option>Santos</option>
+            </select>
+
+            <div class="input-group filtro3">
+
+                <input type="search" name="busca" id="busca" placeholder="🔍 Piscina, Número de quartos, etc" class="filtro3" />
+                
+                <input type="search" name="busca" id="refImovel" class="hidden" placeholder="🔍 Digite aqui a referência do seu imóvel">    
+                <button type="button" class="btn">Buscar</button>
+
+            </div>
+            
+            <button id="refe" onclick="addClass()">
+               <nobr>Busca por referência</nobr>
+            </button>
+        </div>
+
+
+
+        <div class="triangulo"></div>
+    </div>
+
+    <div class="content">
+        
+        <h3 class="title-center">Caso prefira, busque seu imóvel por categorias:</h3>
+
+        <div class="cards-group">
+
+            <div class="cards">
+
+                <div>
+                    <img src="images/star.png" alt="star">
+                </div>
+
+                <div>
+                    Destaque da semana
+                </div>
+
+            </div>
+
+            <div class="cards">
+
+                <div>
+                    <img src="images/swimming-pool.png" alt="pool">
+                </div>
+                <div>
+                    Imóveis com piscina
+                </div>
+
+            </div>
+            
+            <div class="cards">
+
+                <div>
+                    <img src="images/beach.png" alt="beach">
+                </div>
+                <div>
+                    Imóveis perto da praia
+                </div>
+
+            </div>
+
+            <div class="cards">
+
+                <div>
+                    <img src="images/price.png" alt="price">
+                </div>
+                <div>
+                    Baixaram o preço
+                </div>
+
+            </div>
+
+            <div class="cards">
+
+                <div>
+                    <img src="images/family.png" alt="family">
+                </div>
+                <div>
+                    Para famílias grandes 
+                </div>
+
+            </div>
+
+            <div class="cards">
+
+                <div>
+                    <img src="images/condominium.png" alt="condominium"> 
+                </div>
+                <div>
+                    Imóveis em condomínio
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="anuncio">
+            <p>
+               Quer <b>vender</b> o seu imóvel? Preencha o nosso formulário:
+            </p> 
+            <span class="span-padr">
+                Anuncie aqui
+            </span>
+        </div>
+
+        <h1>
+            Em dúvidas sobre comprar um imóvel?
+        </h1>
+
+
+        <div class="card-imovel">
+            <div>
+                <img src="images/financing.png" alt="financiamento">
+            </div>
+
+            <div>
+                <h2>Saiba se você pode financiar um imóvel</h2>
+                <p>Ajudamos você a simular os valores de entrada e parcelas do seu financiamento.</p>
+                <br>
+                <span>
+                    CLIQUE E FAÇA UMA SIMULAÇÃO GRÁTIS
+                </span>
+            </div>
+
+        </div>
+
+        <div class="info">
+            <div class="card-info-1 card-info">
+
+                <div></div>
+                <div></div>
+
+                <div class="card-text">
+
+                    <img src="images/conhecer-processo-color.png" alt="info-image">
+                    <div>
+                        <p>"Ainda tenho duvidas sobre o processo de compra de um imóvel."</p>              
+                        <span class="span-padr">Saiba mais 🏠</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-info-2 card-info">
+                    
+                <div class="card-text">
+                
+                    <img src="images/conhecer-regiao-color.png" alt="info-image">
+                    <div>
+                        <p>"Gostaria de conhecer melhor a região antes de me mudar."</p>
+                        <span>Saiba mais 🏖</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-info-3 card-info">
+                
+                <div class="card-text">
+
+                    <img src="images/conhecer-ci-color.png" alt="info-image">
+                    <div>
+                        <p>"Preciso saber mais sobre o Centro Imobiliário para fazer negócio."</p>
+                        <span class="span-padr">Saiba mais 💼</span>
+                    </div>
+
+                </div>
+
+            </div>    
+        </div>
+
+        <section class="form-duv">
+
+            <form action="">
+
+                <div class="div-content">
+
+                    <div class="text-form">
+
+                        <h3>Você possui alguma dúvida que não se enquadra em nenhum dos temas acima?</h3>
+
+                        <h4>Sem problemas! Basta nos enviar uma mensagem por meio do formulário e nossa equipe entrará em contato o quanto antes.</h4>
+
+                    </div>
+
+                    <div class="form-input-duv">
+
+                        <input type="text" placeholder="Nome" class="input-div">
+                        <input type="email" placeholder="Email" class="input-div">
+                        <input type="text" placeholder="Assunto" class="input-div">
+                        <textarea name="mensagem" id="mensage" rows="7" class="input-textarea" placeholder="Mensagem"></textarea>
+
+                        <input type="submit" placeholder="Enviar" class="input-div submit">
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        
+        <footer>
+    
+            <div class="footer-split">
+                
+                <div class="inst">
+                    <p>INSTITUCIONAL</p>
+    
+                    <span>
+                        <p>Localização</p>
+                        <p>Trabalhe conosco</p>
+    
+                    </span>
+                </div>
+    
+                <div class="sociais">
+    
+                    <div>
+                        <span class="logo-imo">
+                            <img src="images/logo-nova.png" alt="logo imobiliária">
+                        </span>
+                                               
+                        <p>Seu imóvel no litoral</p>
+                    </div>
+    
+    
+                    <div class="social-midia">
+                        
+                        <a href="https://www.facebook.com/centroimobiliario.contato/">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/centro.imobiliario/">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        
+                    </div>
+    
+                </div>
+    
+            </div>
+
+            <div class="incorp">
+                <p>
+                    © 2022 Centro Imobiliario LTDA - CRECI J-22277
+                </p>
+            </div>
+    
+        </footer>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
