@@ -1,41 +1,51 @@
 $(window).scroll(function () {
   let imgLogo = document.getElementById('logo')
-
-
-  if ($(this).scrollTop() > 190 && window.matchMedia("(min-width: 770px)")) {
-    $('.form-top').addClass('changed')
   
-    $('.navbar-fixed').css('background-color', '#6eade7')
-    $('.phone').css('display', 'none')
-    $('.btn').css('background-color', '#ffb43b')
+  let menu = document.getElementsByClassName('menu')
+  
+
+  if( $(window).width() > 800){
+
+    if ($(this).scrollTop() > 190 ){
+      $('.form-top').addClass('changed')
     
-    $('#refe').css('margin-top', '15px!important')
-    $('#refe').css('background', 'rgba(0,0,0,.3)')
-    $('#refe').css('border', 'none')
-
-    $('.filtro1').css('border', 'none')
-    $('.filtro2').css('border', 'none')
-
-    imgLogo.src = 'images/logo-branco2.png'
-    imgLogo.style.width = '10vh'
-    
-  } else {
-
-        $('.navbar-fixed').css('background-color', 'transparent') 
+      $('.navbar-fixed').css('background-color', '#6eade7')
+      $('.phone').css('display', 'none')
+      $('.btn').css('background-color', '#ffb43b')
       
-        $('.form-top').removeClass('changed')
-        $('.phone').css('display', 'block')
-        $('.menu').css('margin-right', '0px')
-        $('.btn').css('background-color', '#6eade7')
+      $('#refe').css('margin-top', '15px!important')
+      $('#refe').css('background', 'rgba(0,0,0,.3)')
+      $('#refe').css('border', 'none')
 
-        $('.refImovel').css('height', '500px!important')
+      $('.filtro1').css('border', 'none')
+      $('.filtro2').css('border', 'none')
 
-        $('#refe').css('margin-top', '15px!important')
-        $('#refe').css('border', '1px solid #fff')
+      imgLogo.src = 'images/logo-branco2.png'
+      imgLogo.style.width = '10vh'
+      
+    } else {
 
-            
-        imgLogo.src = 'images/logo-branco.png'
-        imgLogo.style.width = '28vh'
+          $('.navbar-fixed').css('background-color', 'transparent') 
+        
+          $('.form-top').removeClass('changed')
+          $('.phone').css('display', 'block')
+
+          $('.menu').css('margin-right', '0px')
+          $('.btn').css('background-color', '#6eade7')
+
+          $('.refImovel').css('height', '500px!important')
+
+          $('#refe').css('margin-top', '15px!important')
+          $('#refe').css('border', '1px solid #fff')
+              
+          imgLogo.src = 'images/logo-branco.png'
+          imgLogo.style.width = '28vh'
+    };
+
+  }else{
+    
+    
+    
   }
 })
 
